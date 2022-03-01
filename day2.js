@@ -45,13 +45,10 @@ function onlyPoisonReversed(arrayOfObjects)
 
     for (var i = 0; i < arrayOfObjects.length; i++)
     {
-        if (arrayOfObjects[i].types.length === 1)
+        if ((arrayOfObjects[i].types.length === 1) && (arrayOfObjects[i].types[0] === "poison"))
         {
-            if (arrayOfObjects[i].types[0] === "poison")
-            {
                 arrayOfNames.push(reverseArray(arrayOfObjects[i].name));
                 count1++;
-            }
         }
     }
 
